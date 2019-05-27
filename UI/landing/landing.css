@@ -52,6 +52,15 @@
     padding: 6px 0px
 }
 
+.search{
+    display: flex;
+    text-transform: uppercase;
+}
+
+.menu{
+    margin: auto 10px;
+}
+
 .cart>div{
 text-align: center;
 padding-right: 10PX
@@ -172,7 +181,7 @@ li:hover fas{
     height: 100%;
 }
 
-button{
+button, .button{
     width: 200px;
     padding: 10px 10px;
     font-size: 13px;
@@ -182,8 +191,6 @@ button{
     color: white;
     margin: 10px 10px;
 }
-
-
 
 .foot_content{
     display: flex;
@@ -228,4 +235,124 @@ h2{
     line-height: 1.2;
 }
 
+.user-logout{
+    display: none
+}
 
+.most-view {
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: solid #a22020;
+    margin: 20px;
+}
+
+.moreView{
+    display: flex;
+    justify-content: flex-end
+}
+
+.buy-div {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.buy{
+    width: 80%;
+}
+
+.product-cont{
+    /* width: 100%; */
+    margin: 20px;
+    padding: 10px;
+    background: #cecece54;
+}
+
+select {
+    width: 120px;
+    border: none;
+    border-radius: 2px;
+    font-size: 14px;
+    /* line-height: 1.5; */
+    padding: 3px;
+    float: right;
+    /* color: #000; */
+    /* color: rgba(0,0,0,0); */
+    text-shadow: 0 0 0 #000;
+}
+
+select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.moreViewButton {
+    padding: 5px;
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    width: 150px;
+    background: white;
+    color: #a22020;
+    font-size: 14px;
+}
+
+.moreViewButton:hover {
+    color: white;
+    background: #a22020;
+}
+
+select#xyz {
+    border:0px;
+    outline:0px;
+ }
+
+ #product{
+    margin: 10px 0px;
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: auto auto  auto auto;
+    /* background: white; */
+}
+
+#test{
+    width: 100%;
+    display: inline-grid;
+    padding: 10px;
+    grid-template-columns: auto auto auto auto;
+    margin: 20px
+}
+
+#description-div{
+    text-align: center;
+}
+
+#new-product{
+    /* width:100%; */
+    background: white;
+    margin: 2%;
+    padding: 10px;
+    box-shadow: 2px 2px 2px 2px grey;
+    /* height: 200px; */
+}
+
+#new-price {
+    color: #3864e0;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5px 0 5px 0px;
+}
+
+#new-image{
+    width: 100%;
+    height: 150px;    width: 100%;
+    height: 150px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+#new-category {
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 1.5;
+    color: grey;
+}

@@ -30,10 +30,40 @@ let productData = [
         price: 20000,
         quantity: 20,
         src: "../public/image/admin/lady2.jpg"
+    },
+    {   
+        id: 1,
+        name: "product",
+        category: "electronics",
+        price: 20000,
+        quantity: 20,
+        src: "../public/image/admin/lady3.jpg"
+    },
+    {   
+        id: 1,
+        name: "product",
+        category: "dress",
+        price: 20000,
+        quantity: 20,
+        src: "../public/image/admin/lady5.jpg"
+    },
+    {   
+        id: 1,
+        name: "product",
+        category: "bags",
+        price: 20000,
+        quantity: 20,
+        src: "../public/image/admin/lady2.jpg"
+    },
+    {   
+        id: 1,
+        name: "product",
+        category: "cars",
+        price: 20000,
+        quantity: 20,
+        src: "../public/image/admin/lady6.jpg"
     }
 ]
-
-let productStore = []
 
 // creating the DOM for the product
 function product(data){  
@@ -66,9 +96,11 @@ function product(data){
 }
 
 //  landing page loading
-function homePage(){
+function homePage(target_div){
     var urlParams = new URLSearchParams(window.location.search);
     let userName = urlParams.get('name');
+    console.log(target_div)
+    console.log()
     if(userName){
         let logout = document.getElementById("user-logout")
         let login = document.getElementById("user-login")
@@ -79,13 +111,28 @@ function homePage(){
         console.log("dashbord")
     }
     
-    productLoop();
+    productLoop(target_div);
 }
 
+// change category
+function changeCategory(cat){
+    console.log(cat.value)
+    homePage(cat.value)
+}
 
-function productLoop(){
+function productLoop(value){
+    if(value =="allProduct"){
             productStore = productData
             productStore.forEach(data => {
             product(data);
-       });
+         });
+    }else{
+        let newCategory = productData.filter(element=>{
+            return element.category == value
+        })
+            productStore = newCategory
+            productStore.forEach(data => {
+            product(data);
+        });
+    }
 }

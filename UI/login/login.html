@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
-<body>
+<body >
     <div class="signUp-container">
         <div class="head">
             <div class="search">
@@ -38,9 +38,9 @@
                     <div class="form-field">
                         <h2> Login </h2>
                         <form action="/login" method="post">
-                            <input type="email" placeholder="Email" name="email">
-                            <input type="password" placeholder="Password" name="password">
-                            <input type="submit" value="submit" class="submit">
+                            <input type="email" placeholder="Email" name="email" id="userName">
+                            <input type="password" placeholder="Password" name="password" id="password">
+                            <button type="button" onclick="loginUser()" class="submit-form">  Submit here</button>
                         </form>
                         <div class="signIn-link">
                             <span>
@@ -53,5 +53,6 @@
             </div>
         </div>
     </div>
+    <script src="./login.js"></script>
 </body>
 </html>

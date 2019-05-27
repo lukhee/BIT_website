@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Products</title>
+    <link rel="stylesheet" href="../landing/landing.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body onload="homePage('allProduct')">
+    <div class="container">
+        <!-- header -->
+        <div class="head">
+            <div class="search">
+                <i class="fas fa-bars menu"></i>
+                <div>
+                    <h2 id="loggedInName"></h2>
+                </div>
+            </div>
+            <div class="logo">
+               <img src="../public/image/logo/logo2.PNG" alt="">
+            </div>
+            <div class="cart">
+                <div id="user-login">
+                    <i class="fas fa-user-alt paddin"></i>
+                    <a href="../login/login.html" class="cart-div"><p>Login</p></a>
+                </div>
+                <div id="user-logout" class="user-logout">
+                    <i class="fas fa-user-alt paddin"></i>
+                    <p>Logout</p>
+                </div>
+                <div>
+                    <i class="fas fa-cart-arrow-down paddin"></i>
+                    <span class="cart-div"><p>Cart</p></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="product-cont">
+        <div class="product-category">
+            <span class="most-view">Most View Product</span>
+            <select name="category" onchange="changeCategory(this)">
+                <option value="Products"> All Product </option>
+                <option value="electronics"> Electronics </option>
+                <option value="dress"> Dress </option>
+                <option value="cars"> Cars </option>
+            </select>
+        </div>
+        <div id="product">
+            <!-- all products will be display here -->
+        </div>
+        <div class="moreView">
+            <button onclick="getMoreProduct()" class="moreViewButton"> More View</button>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="foot">
+        <div class="foot_content">
+            <ul>
+                <li class="foot_head">Company</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Job</li>
+            </ul>
+            <ul>
+                <li class="foot_head">Customer Service</li>
+                <li>Orders</li>
+                <li>Payment Methods</li>
+                <li>Shipping</li>
+            </ul>
+            <ul>
+                <li class="foot_head">My Account</li>
+                <li>Account</li>
+                <li>Favorites</li>
+                <li>NewsLetter</li>
+            </ul>
+            <ul>
+                <li class="foot_head">Social Network</li>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>Instagram</li>
+            </ul>
+        </div>  
+        <script src="./product.js"></script>
+</body>
+</html>
