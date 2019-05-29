@@ -61,6 +61,20 @@
     margin: auto 10px;
 }
 
+.searchDiv{
+    width: 50%;
+    text-align: center
+}
+
+.searchDiv>input {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 6px 8px;
+    background: #f0f0f0c9;
+    border: none;
+}
+
 .cart>div{
 text-align: center;
 padding-right: 10PX
@@ -310,7 +324,7 @@ select#xyz {
     margin: 10px 0px;
     width: 100%;
     display: inline-grid;
-    grid-template-columns: auto auto  auto auto;
+    grid-template-columns: 25% 25% 25% 25%;
     /* background: white; */
 }
 

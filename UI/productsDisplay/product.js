@@ -99,16 +99,12 @@ function product(data){
 function homePage(target_div){
     var urlParams = new URLSearchParams(window.location.search);
     let userName = urlParams.get('name');
-    console.log(target_div)
-    console.log()
     if(userName){
         let logout = document.getElementById("user-logout")
         let login = document.getElementById("user-login")
         document.getElementById("loggedInName").innerHTML = userName;
         logout.style.display = "inline-block"
         login.style.display = "none"
-    } else{
-        console.log("dashbord")
     }
     
     productLoop(target_div);
@@ -116,11 +112,12 @@ function homePage(target_div){
 
 // change category
 function changeCategory(cat){
-    console.log(cat.value)
     homePage(cat.value)
 }
 
 function productLoop(value){
+    let mylist = document.getElementById('product')
+    mylist.innerHTML = ''
     if(value =="allProduct"){
             productStore = productData
             productStore.forEach(data => {
