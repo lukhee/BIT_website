@@ -26,10 +26,15 @@
 
 .logo{
     height: 100%;
+    display: flex; 
 }
 
-.logo>img{
+.logo>img, .logo>a>img,{
    max-height: 100%
+}
+
+.signInLogo{
+    max-width: 90px
 }
 
 .fa-user-alt{
@@ -100,7 +105,7 @@ padding-right: 10PX
 
 .main_img{
     width: 100%;
-    height: 500px;
+    max-height: 500px;
     z-index: -1;
 }
 
@@ -112,8 +117,6 @@ padding-right: 10PX
 
 .cat_section{
     width: 100%;
-    /* height: 100px; */
-    position: absolute;
     bottom: 0px;
     background: black;
     opacity: 0.8;
@@ -121,9 +124,11 @@ padding-right: 10PX
 
 .cat_icons>ul{
     margin: 0;
-    padding: 0;
+    padding-top: 10px;
     list-style: none;
     display: flex;
+    background: #f3f2f0;
+    color: #ab0f24;
     justify-content: space-around;
 }
 
@@ -196,8 +201,8 @@ li:hover fas{
 }
 
 button, .button{
-    width: 200px;
-    padding: 10px 10px;
+    max-width: 200px;
+    padding: 10px 30px;
     font-size: 13px;
     cursor: pointer;
     border: none;
@@ -207,9 +212,10 @@ button, .button{
 }
 
 .foot_content{
-    display: flex;
-    justify-content: space-around;
+    display: inline-grid;
+    grid-template-columns: 25% 25% 25% 25%;
     padding: 20px;
+    width: 100%
     /* margin: 30px 10px; */
 }
 
@@ -221,7 +227,8 @@ button, .button{
 
 .foot_content>ul{
     padding: 0;
-    margin: 0;
+    /* margin: 0; */
+    margin: 2% 20%;
     list-style: none;
 }
 
@@ -254,7 +261,7 @@ h2{
 }
 
 .most-view {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 600;
     border-bottom: solid #a22020;
     margin: 20px;
@@ -327,15 +334,6 @@ select#xyz {
     grid-template-columns: 25% 25% 25% 25%;
     /* background: white; */
 }
-
-#test{
-    width: 100%;
-    display: inline-grid;
-    padding: 10px;
-    grid-template-columns: auto auto auto auto;
-    margin: 20px
-}
-
 #description-div{
     text-align: center;
 }
@@ -369,4 +367,26 @@ select#xyz {
     text-transform: uppercase;
     line-height: 1.5;
     color: grey;
+}
+@media (max-width: 860px){
+    #product{
+        grid-template-columns: 50% 50%;
+    }
+    .foot_content{
+        grid-template-columns: 50% 50%
+    }
+    .cart-display{
+        display: block;
+    }
+    .cart-display>div{
+        height: auto;
+        width: 100%;
+    }
+    .small-screen-div{
+        height: auto;
+    }
+    .cat_icons{
+        display: none;
+    }
+
 }

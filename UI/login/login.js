@@ -17,20 +17,17 @@ const data = [
 ]
 
 function loginUser(){
-    let userState = true;
-    for(var i = 0; i<data.length; i++){
-        // get user from the DOM
-        let userName = document.getElementById("userName").value;
-        let password = document.getElementById("password").value;
-        if(userName == data[i].name && password == data[i].password){
-            console.log(" congrat !!! you are logged in")
-            window.location.href = `../landing/landing.html?name=` + data[i].name;
-            return
-        } else {
-            userState = false;
-        }
-    }
-    if(!userState){
-        alert("incorrect credentials, please check or register with us")
+    let userName = document.getElementById("userName").value;
+    let password = document.getElementById("password").value;
+    let result = data.find(element=> {
+        return (element.name ==userName && element.password == password)
+    })
+    // console.log(result)
+    if(result){
+        window.location.href = `../landing/landing.html?name=` +result.name;
+    }else{
+        alert("incorrect credential, please register")
+        document.getElementById("userName").value = ""
+        document.getElementById("password").value = ""
     }
 }

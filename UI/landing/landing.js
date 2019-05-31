@@ -66,6 +66,7 @@ function product(data){
 }
 
 //  landing page loading
+
 function homePage(){
     var urlParams = new URLSearchParams(window.location.search);
     let userName = urlParams.get('name');
@@ -88,4 +89,13 @@ function productLoop(){
             productStore.forEach(data => {
             product(data);
        });
+}
+
+// to logout
+function logout(){
+    let logout = document.getElementById("user-logout")
+    document.getElementById("loggedInName").innerHTML = "";
+    let login = document.getElementById("user-login")
+    logout.style.display = "none"
+    login.style.display = "inline-block"
 }

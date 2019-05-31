@@ -29,7 +29,10 @@
                     <i class="fas fa-user-alt paddin"></i>
                     <a href="../login/login.html" class="cart-div"><p>Login</p></a>
                 </div>
-                <div id="user-logout" class="user-logout">
+                <div class="user-name">
+                    <h2 id="loggedInName"></h2>
+                </div>
+                <div id="user-logout" class="user-logout" onclick="logout()">
                     <i class="fas fa-user-alt paddin"></i>
                     <p>Logout</p>
                 </div>
@@ -79,7 +82,7 @@
             <!-- cat -->
             <div class="cart-display">
                 <div class="left-div">
-                    <div class="big-image-div">
+                    <div class="big-image-div small-screen-div">
                         <div class="image-div">
                             <img src="../public/image/carousel/landing1.jpg" alt="image here">
                         </div>
@@ -88,7 +91,7 @@
                         <h2> SHOPPING </h2> 
                         <button> check here</button>
                     </div>
-                    <div class="small-div">
+                    <div class="small-div small-screen-div">
                         <div class="image-div">
                             <img src="../public/image/carousel/landing3.jpg" alt="image here">
                         </div>
@@ -100,7 +103,7 @@
                 </div>
 
                 <div class="right-div">
-                    <div class="small-div">
+                    <div class="small-div small-screen-div">
                         <div class="image-div">
                             <img src="../public/image/carousel/landing4.jpg" alt="image here">
                         </div>
@@ -109,7 +112,7 @@
                         <h2> WEARS </h2> 
                         <button> check here</button>
                     </div>
-                    <div class="big-image-div">
+                    <div class="big-image-div small-screen-div">
                         <div class="image-div">
                             <img src="../public/image/carousel/landing8.jpg" alt="image here">
                         </div>
@@ -125,7 +128,7 @@
         <!-- products -->
         <div class="product-cont">
             <div class="product-category">
-                <span class="most-view">Most View Product</span>
+                <span class="most-view">Most View Products</span>
             </div>
             <div id="product">
                 <!-- all products will be display here -->
